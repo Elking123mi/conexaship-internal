@@ -37,7 +37,7 @@ dependencies:
 
   # Core package
   conexaship_core:
-    path: ../conexaship_core
+    path: ./conexaship_core
 
   # State management
   provider: ^6.1.1
