@@ -1,0 +1,23 @@
+name: conexaship_core
+description: Core package shared between public and internal Conexa Ship apps
+version: 1.0.0
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0
+  sqflite_common: ^2.5.0
+  path: ^1.8.3
+  intl: ^0.18.1
+  shared_preferences: ^2.2.2
+  crypto: ^3.0.3
+  flutter_secure_storage: ^9.0.0
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
