@@ -1,0 +1,28 @@
+[build]
+  publish = "build/web"
+  command = """
+    # Install Flutter
+    git clone https://github.com/flutter/flutter.git -b stable --depth 1
+    export PATH="$PATH:`pwd`/flutter/bin"
+    
+    # Enable Flutter web
+    flutter config --enable-web
+    
+    # Get dependencies
+    flutter pub get
+    
+    # Build for web production
+    flutter build web --release
+  """
+
+[build.environment]
+  # Use newer Node version for compatibility
+  NODE_VERSION = "18"
+  # Disable secrets scanning for Flutter cache files
+  SECRETS_SCAN_SMART_DETECTION_ENABLED = "false"
+
+# SPA routing - redirect all routes to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
